@@ -1,7 +1,6 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-
-gradle.properties
-
+#Personnal ignored files
+../gradle.properties
 ../server/

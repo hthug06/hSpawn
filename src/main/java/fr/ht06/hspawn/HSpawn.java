@@ -1,12 +1,15 @@
 package fr.ht06.hspawn;
 
+import fr.ht06.hspawn.Commands.CommandSpawn;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class HSpawn extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        saveDefaultConfig();
+        getCommand("spawn").setExecutor(new CommandSpawn(this));
+        getCommand("setspawn").setExecutor(new CommandSpawn(this));
 
     }
 

@@ -1,0 +1,21 @@
+# Spawn coordinate
+spawn:
+  world: world
+  x: 22.701566434352713
+  y: 65.0
+  z: -27.723590417140027
+  Yaw: 175.5216
+  Pitch: 5.1067696
+
+# Message send to the player with different action
+Message:
+  Setspawn: '&6Spawn Create'
+  TpToSpawn: '&6Teleported to Spawn...'
+  TpToSpawnbyAdmin: '&6Teleported to Spawn by an Admin...'
+
+# Custom permission
+Permission--tp-player-to-spawn: hSpawn.SpawnOtherPlayer
+
+# For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
+playsound-on-/spawn: true
+SoundName: ENTITY_PLAYER_LEVELUP
