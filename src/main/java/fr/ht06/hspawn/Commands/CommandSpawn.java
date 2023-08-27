@@ -63,15 +63,15 @@ public class CommandSpawn implements CommandExecutor {
 
                 player.teleport(spawn);
 
-                if(main.getConfig().getBoolean("playsound-on-/spawn")){
+                if(main.getConfig().getBoolean("playsound on /spawn")){
                     Sound sound = Sound.valueOf(main.getConfig().getString("SoundName").toUpperCase());
-                    player.playSound(spawn, Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
+                    player.playSound(spawn, sound, 1.0f, 1.0f);
                 }
 
                 player.sendMessage(main.getConfig().getString("Message.TpToSpawn").replace("[PLAYER]", player.getName()).replace("&", "§"));
             }
 
-            if((args.length >= 1) && player.hasPermission(main.getConfig().getString("Permission--tp-player-to-spawn"))){
+            if((args.length >= 1) && player.hasPermission(main.getConfig().getString("Permission to tp player to spawn"))){
                 String targetName = args[0];
 
                 if (Bukkit.getPlayer(targetName) != null){
