@@ -22,9 +22,6 @@ public final class HSpawn extends JavaPlugin {
         getCommand("hsreload").setExecutor(this);
         getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
 
-        for (String string : getConfig().getStringList("Commands on first join")){
-            System.out.println(string);
-        }
 
     }
 
