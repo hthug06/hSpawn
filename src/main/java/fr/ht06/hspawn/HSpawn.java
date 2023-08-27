@@ -3,12 +3,14 @@ package fr.ht06.hspawn;
 import fr.ht06.hspawn.Commands.CommandSpawn;
 import fr.ht06.hspawn.Listeners.PlayerListeners;
 import net.md_5.bungee.api.chat.ComponentBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.awt.*;
+import java.util.List;
 
 public final class HSpawn extends JavaPlugin {
 
@@ -19,6 +21,10 @@ public final class HSpawn extends JavaPlugin {
         getCommand("setspawn").setExecutor(new CommandSpawn(this));
         getCommand("hsreload").setExecutor(this);
         getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
+
+        for (String string : getConfig().getStringList("Commands on first join")){
+            System.out.println(string);
+        }
 
     }
 

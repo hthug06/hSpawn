@@ -1,32 +1,41 @@
-#In the whole plugin, you can use the colorcode with the "&"
-#You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
+# In the whole plugin, you can use the colorcode with the "&"
+# You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
 
-#In everything, you can Put [PLAYER] for the name of the player
+# everywhere, you can Put [PLAYER] for the name of the player
 
-#Spawn coordinate
+# Spawn coordinate
 spawn:
   world: world
-  x: 0
-  y: 4.0
-  z: 0.0
-  Yaw: 0
-  Pitch: 0
+  x: 22.67661712442395
+  y: 65.0
+  z: -27.33581746873751
+  Yaw: 169.8244
+  Pitch: 73.342255
 
-#Message send to the player with different action
+# Message send to the player with different action
 Message:
-  Setspawn: "&6Spawn Create"
-  TpToSpawn: "&6Teleported to Spawn..."
-  TpToSpawnbyAdmin: "&6Teleported to Spawn by an Admin..."
+  Setspawn: '&6Spawn Create'
+  TpToSpawn: '&6Teleported to Spawn...'
+  TpToSpawnbyAdmin: '&6Teleported to Spawn by an Admin...'
 
-#Custom permission
-Permission--tp-player-to-spawn: "hSpawn.SpawnOtherPlayer"
+# Custom permission
+Permission to tp player to spawn: hSpawn.SpawnOtherPlayer
 
-#For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
-playsound-on-/spawn: true
+# For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
+playsound on /spawn: true
 SoundName: ENTITY_PLAYER_LEVELUP
 
 
-#You can choose the join and quit message Here:
-Join: "&r[&a+&r] [PLAYER] join the server"
-Quit: "&r[&c-&r] [PLAYER] left the server"
+# You can choose the join and quit message Here:
+Join: '&r[&a+&r] [PLAYER] join the server'
+Quit: '&r[&c-&r] [PLAYER] left the server'
+
+# For the player first join
+Player to spawn on first join: true
+Message on first join: '&bWelcome [PLAYER] on Server.com'
+Commands on first join:
+- Give [PLAYER] minecraft:iron_sword 1
+- msg [PLAYER] Welcome to the server
+
+
 
