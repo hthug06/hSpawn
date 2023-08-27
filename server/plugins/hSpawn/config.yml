@@ -6,11 +6,11 @@
 # Spawn coordinate
 spawn:
   world: world
-  x: 22.67661712442395
+  x: 22.72131136004062
   y: 65.0
-  z: -27.33581746873751
-  Yaw: 169.8244
-  Pitch: 73.342255
+  z: -27.555614995270584
+  Yaw: -179.59752
+  Pitch: 42.21545
 
 # Message send to the player with different action
 Message:
@@ -29,6 +29,8 @@ SoundName: ENTITY_PLAYER_LEVELUP
 # You can choose the join and quit message Here:
 Join: '&r[&a+&r] [PLAYER] join the server'
 Quit: '&r[&c-&r] [PLAYER] left the server'
+
+Spawn on join: true
 
 # For the player first join
 Player to spawn on first join: true

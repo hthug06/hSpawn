@@ -102,17 +102,6 @@ public class CommandSpawn implements CommandExecutor {
 
             }
 
-
-
-            /*String world = config.getString("spawn.world");
-            int x = config.getInt("spawn.x");
-            int y = config.getInt("spawn.y");
-            int z = config.getInt("spawn.z");
-
-            Location spawn;
-            spawn = new Location(Bukkit.getWorld(world), x, y, z);
-            player.teleport(spawn);
-            player.sendMessage("Vous venez d'être téléporter au spawn");*/
         }
 
 

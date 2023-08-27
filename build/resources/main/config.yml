@@ -30,6 +30,8 @@ SoundName: ENTITY_PLAYER_LEVELUP
 Join: "&r[&a+&r] [PLAYER] join the server"
 Quit: "&r[&c-&r] [PLAYER] left the server"
 
+Spawn on join: false
+
 #For the player first join
 Player to spawn on first join: true
 Message on first join: "&bWelcome [PLAYER] on Server.com"

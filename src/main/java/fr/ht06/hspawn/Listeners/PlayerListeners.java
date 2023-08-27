@@ -29,7 +29,22 @@ public class PlayerListeners implements Listener {
         Player player = event.getPlayer();
         event.setJoinMessage(main.getConfig().getString("Join").replace("[PLAYER]", player.getName()).replace("&", "§"));
 
+        if (main.getConfig().getBoolean("Spawn on join")){
+            String world = main.getConfig().getString("spawn.world");
+            double x = main.getConfig().getDouble("spawn.x");
+            double y = main.getConfig().getDouble("spawn.y");
+            double z = main.getConfig().getDouble("spawn.z");
+            float Yaw = (float) main.getConfig().getDouble("spawn.Yaw" );
+            float Pitch = (float) main.getConfig().getDouble("spawn.Pitch");
+
+            World World = Bukkit.getWorld(world);
+
+            Location spawn = new Location(Bukkit.getWorld(world), x, y, z, Yaw, Pitch);
+            player.teleport(spawn);
+        }
+
     }
+
     @EventHandler
     public void onQuit(PlayerQuitEvent event){
         Player player = event.getPlayer();
