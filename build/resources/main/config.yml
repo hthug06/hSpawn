@@ -1,6 +1,8 @@
 #In the whole plugin, you can use the colorcode with the "&"
 #You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
 
+#In everything, you can Put [PLAYER] for the name of the player
+
 #Spawn coordinate
 spawn:
   world: world
@@ -26,6 +28,6 @@ SoundName: ENTITY_PLAYER_LEVELUP
 
 
 #You can choose the join and quit message Here:
-Join: "[PLAYER] à Rejoit le serv"
-Quit: ""
+Join: "&r[&a&l+&r] [PLAYER] join the server"
+Quit: "&r[&c&l+&r] [PLAYER] left the server"
 

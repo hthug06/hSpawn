@@ -16,4 +16,8 @@ commands:
   test:
     description: Test command
 
+  hreload:
+    description: reload the config of the plugin hSpawn
+    permission: hSpawn.reload
+    aliases: hrl
 
