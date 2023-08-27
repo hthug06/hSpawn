@@ -1,21 +1,31 @@
-# Spawn coordinate
+#In the whole plugin, you can use the colorcode with the "&"
+#You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
+
+#Spawn coordinate
 spawn:
   world: world
-  x: 22.701566434352713
-  y: 65.0
-  z: -27.723590417140027
-  Yaw: 175.5216
-  Pitch: 5.1067696
+  x: 0
+  y: 4.0
+  z: 0.0
+  Yaw: 0
+  Pitch: 0
 
-# Message send to the player with different action
+#Message send to the player with different action
 Message:
-  Setspawn: '&6Spawn Create'
-  TpToSpawn: '&6Teleported to Spawn...'
-  TpToSpawnbyAdmin: '&6Teleported to Spawn by an Admin...'
+  Setspawn: "&6Spawn Create"
+  TpToSpawn: "&6Teleported to Spawn..."
+  TpToSpawnbyAdmin: "&6Teleported to Spawn by an Admin..."
+  test: "[PLAYER]"
 
-# Custom permission
-Permission--tp-player-to-spawn: hSpawn.SpawnOtherPlayer
+#Custom permission
+Permission--tp-player-to-spawn: "hSpawn.SpawnOtherPlayer"
 
-# For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
+#For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
 playsound-on-/spawn: true
 SoundName: ENTITY_PLAYER_LEVELUP
+
+
+#You can choose the join and quit message Here:
+Join: "[PLAYER] à Rejoit le serv"
+Quit: ""
+

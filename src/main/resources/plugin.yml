@@ -12,3 +12,8 @@ commands:
     description: Create the spawn location
     permission: hspawn.setspawn
     aliases: sspawn
+
+  test:
+    description: Test command
+
+

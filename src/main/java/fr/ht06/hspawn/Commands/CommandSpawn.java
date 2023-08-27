@@ -38,7 +38,7 @@ public class CommandSpawn implements CommandExecutor {
             main.saveConfig();
 
 
-            player.sendMessage(main.getConfig().getString("Message.Setspawn").replace("&", "§"));
+            player.sendMessage(main.getConfig().getString("Message.Setspawn").replace("[PLAYER]", player.getName()).replace("&", "§"));
         }
 
         if (cmd.getName().equalsIgnoreCase("Spawn")){
@@ -68,10 +68,10 @@ public class CommandSpawn implements CommandExecutor {
                     player.playSound(spawn, Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
                 }
 
-                player.sendMessage(main.getConfig().getString("Message.TpToSpawn").replace("&", "§"));
+                player.sendMessage(main.getConfig().getString("Message.TpToSpawn").replace("[PLAYER]", player.getName()).replace("&", "§"));
             }
 
-            if((args.length >= 1) && player.hasPermission("hSpawn.SpawnOtherPlayer")){
+            if((args.length >= 1) && player.hasPermission(main.getConfig().getString("Permission--tp-player-to-spawn"))){
                 String targetName = args[0];
 
                 if (Bukkit.getPlayer(targetName) != null){
@@ -91,7 +91,7 @@ public class CommandSpawn implements CommandExecutor {
                     Location spawn1 = new Location(Bukkit.getWorld(world), x, World.getHighestBlockYAt(spawn), z, Yaw, Pitch);
 
                     //msg to target Player
-                    target.sendMessage(main.getConfig().getString("Message.TpToSpawnbyAdmin").replace("&", "§"));
+                    target.sendMessage(main.getConfig().getString("Message.TpToSpawnbyAdmin").replace("[PLAYER]", player.getName()).replace("&", "§"));
 
                     target.teleport(spawn1);
                     player.playSound(spawn, Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);

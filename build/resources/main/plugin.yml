@@ -1,5 +1,5 @@
 name: hSpawn
-version: '1.0'
+version: '1.1'
 main: fr.ht06.hspawn.HSpawn
 api-version: '1.20'
 author: ht06
@@ -12,3 +12,8 @@ commands:
     description: Create the spawn location
     permission: hspawn.setspawn
     aliases: sspawn
+
+  test:
+    description: Test command
+
+
