@@ -13,11 +13,8 @@ commands:
     permission: hspawn.setspawn
     aliases: sspawn
 
-  test:
-    description: Test command
-
-  hreload:
+  hsreload:
     description: reload the config of the plugin hSpawn
     permission: hSpawn.reload
-    aliases: hrl
+    aliases: hsrl
 

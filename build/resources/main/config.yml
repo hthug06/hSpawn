@@ -17,7 +17,6 @@ Message:
   Setspawn: "&6Spawn Create"
   TpToSpawn: "&6Teleported to Spawn..."
   TpToSpawnbyAdmin: "&6Teleported to Spawn by an Admin..."
-  test: "&a[PLAYER]"
 
 #Custom permission
 Permission--tp-player-to-spawn: "hSpawn.SpawnOtherPlayer"
@@ -28,6 +27,6 @@ SoundName: ENTITY_PLAYER_LEVELUP
 
 
 #You can choose the join and quit message Here:
-Join: "&r[&a&l+&r] [PLAYER] join the server"
-Quit: "&r[&c&l+&r] [PLAYER] left the server"
+Join: "&r[&a+&r] [PLAYER] join the server"
+Quit: "&r[&c-&r] [PLAYER] left the server"
 

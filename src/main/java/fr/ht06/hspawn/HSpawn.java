@@ -17,7 +17,7 @@ public final class HSpawn extends JavaPlugin {
         saveDefaultConfig();
         getCommand("spawn").setExecutor(new CommandSpawn(this));
         getCommand("setspawn").setExecutor(new CommandSpawn(this));
-        getCommand("hreload").setExecutor(this);
+        getCommand("hsreload").setExecutor(this);
         getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
 
     }
@@ -30,7 +30,7 @@ public final class HSpawn extends JavaPlugin {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player player = (Player) sender;
-        if (cmd.getName().equalsIgnoreCase("hreload")){
+        if (cmd.getName().equalsIgnoreCase("hsreload")){
             reloadConfig();
             sender.sendMessage("§9[§bhSpawn§9] §cConfig Reload");
         }

@@ -23,6 +23,7 @@ public class PlayerListeners implements Listener {
     public void onQuit(PlayerQuitEvent event){
         Player player = event.getPlayer();
         event.setQuitMessage(main.getConfig().getString("Quit").replace("[PLAYER]", player.getName()).replace("&", "§"));
+
     }
 
 }
