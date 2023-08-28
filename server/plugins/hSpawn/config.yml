@@ -6,11 +6,11 @@
 # Spawn coordinate
 spawn:
   world: world
-  x: 22.458224139777084
+  x: 22.510795824718556
   y: 65.0
-  z: -27.323043395769265
-  Yaw: 178.09174
-  Pitch: 26.408688
+  z: -27.31910040331441
+  Yaw: 159.40172
+  Pitch: 9.727026
 
 # Message send to the player with different action
 Message:
@@ -31,6 +31,7 @@ Join: '&r[&a+&r] [PLAYER] join the server'
 Quit: '&r[&c-&r] [PLAYER] left the server'
 
 Spawn on join: false
+Spawn on death: false
 
 # For the player first join
 Player to spawn on first join: true
@@ -40,7 +41,7 @@ Commands on first join:
 - msg [PLAYER] Welcome to the server
 
 # If a player fall in the void, he can be tp to spawn
-Void to spawn: false
+Void to spawn: true
 
 
 

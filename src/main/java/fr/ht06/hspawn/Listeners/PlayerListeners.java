@@ -1,23 +1,20 @@
 package fr.ht06.hspawn.Listeners;
 
 import fr.ht06.hspawn.HSpawn;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Server;
-import org.bukkit.World;
+import fr.ht06.hspawn.TimerTask;
+import org.bukkit.*;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.*;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashSet;
 import java.util.Timer;
-import java.util.TimerTask;
 import java.util.UUID;
 
 public class PlayerListeners implements Listener {
@@ -121,6 +118,29 @@ public class PlayerListeners implements Listener {
             //Remove it from the list if you want
             preventFallDamages.remove(e.getEntity().getUniqueId());
         }
+    }
+
+    @EventHandler
+    public void onDeath(PlayerRespawnEvent event){
+        Player player = event.getPlayer();
+        if (main.getConfig().getBoolean("Spawn on death")){
+            String world = main.getConfig().getString("spawn.world");
+            double x = main.getConfig().getDouble("spawn.x");
+            double y = main.getConfig().getDouble("spawn.y");
+            double z = main.getConfig().getDouble("spawn.z");
+            float Yaw = (float) main.getConfig().getDouble("spawn.Yaw" );
+            float Pitch = (float) main.getConfig().getDouble("spawn.Pitch");
+
+            World World = Bukkit.getWorld(world);
+
+            Location spawn = new Location(World, x, y, z, Yaw, Pitch);
+
+            event.setRespawnLocation(spawn);
+        }
+
+       // }
+
+
     }
 
 }

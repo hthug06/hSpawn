@@ -31,6 +31,7 @@ Join: "&r[&a+&r] [PLAYER] join the server"
 Quit: "&r[&c-&r] [PLAYER] left the server"
 
 Spawn on join: false
+Spawn on death: true
 
 #For the player first join
 Player to spawn on first join: true
