@@ -1,5 +1,5 @@
 name: hSpawn
-version: '1.5'
+version: '1.5.1'
 main: fr.ht06.hspawn.HSpawn
 api-version: '1.20'
 author: ht06
@@ -17,5 +17,9 @@ commands:
     description: reload the config of the plugin hSpawn
     permission: hSpawn.reload
     aliases: hsrl
+
+  hspawn:
+    description: Credit of the plugin
+    aliases: hs
 
 

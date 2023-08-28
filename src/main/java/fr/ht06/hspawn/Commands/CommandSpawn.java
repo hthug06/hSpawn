@@ -93,7 +93,7 @@ public class CommandSpawn implements CommandExecutor {
                     //msg to target Player
                     target.sendMessage(main.getConfig().getString("Message.TpToSpawnbyAdmin").replace("[PLAYER]", player.getName()).replace("&", "§"));
 
-                    target.teleport(spawn1);
+                    target.teleport(spawn);
                     if(main.getConfig().getBoolean("playsound on /spawn")) {
                         Sound sound = Sound.valueOf(main.getConfig().getString("SoundName").toUpperCase());
                         player.playSound(spawn, sound, 1.0f, 1.0f);

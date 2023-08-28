@@ -18,4 +18,8 @@ commands:
     permission: hSpawn.reload
     aliases: hsrl
 
+  hspawn:
+    description: Credit of the plugin
+    aliases: hs
+
 

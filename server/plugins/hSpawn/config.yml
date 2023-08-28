@@ -1,46 +1,52 @@
-# In the whole plugin, you can use the colorcode with the "&"
-# You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
+#In the whole plugin, you can use the colorcode with the "&"
+#You can see more here: https://www.spigotmc.org/resources/colorcodes.32415/
 
-# everywhere, you can Put [PLAYER] for the name of the player
+#everywhere, you can Put [PLAYER] for the name of the player
 
-# Spawn coordinate
+#Spawn coordinate
 spawn:
   world: world
-  x: 22.510795824718556
-  y: 65.0
-  z: -27.31910040331441
-  Yaw: 159.40172
-  Pitch: 9.727026
+  x: 0
+  y: 4.0
+  z: 0.0
+  Yaw: 0
+  Pitch: 0
 
-# Message send to the player with different action
+#For the player first join
+on_first_join:
+  items:
+    - material: STONE
+      count: 1
+      name: "My stone"
+    - material: DIRT
+      count: 2
+      name: "&aMy dirt"
+  messages:
+    - Welcome [PLAYER], on this server!
+  commands:
+    - msg [PLAYER] WELCOME !
+
+#Message send to the player with different action
 Message:
-  Setspawn: '&6Spawn Create'
-  TpToSpawn: '&6Teleported to Spawn...'
-  TpToSpawnbyAdmin: '&6Teleported to Spawn by an Admin...'
+  Setspawn: "&6Spawn Create"
+  TpToSpawn: "&6Teleported to Spawn..."
+  TpToSpawnbyAdmin: "&6Teleported to Spawn by an Admin..."
 
-# Custom permission
-Permission to tp player to spawn: hSpawn.SpawnOtherPlayer
+#Custom permission
+Permission to tp player to spawn: "hSpawn.SpawnOtherPlayer"
 
-# For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
+#For the list of every sound, go here : https://dev.bukkit.org/projects/justsound/pages/sound-list
 playsound on /spawn: true
 SoundName: ENTITY_PLAYER_LEVELUP
 
-
-# You can choose the join and quit message Here:
-Join: '&r[&a+&r] [PLAYER] join the server'
-Quit: '&r[&c-&r] [PLAYER] left the server'
+#You can choose the join and quit message Here:
+Join: "&r[&a+&r] [PLAYER] join the server"
+Quit: "&r[&c-&r] [PLAYER] left the server"
 
 Spawn on join: false
-Spawn on death: false
+Spawn on death: true
 
-# For the player first join
-Player to spawn on first join: true
-Message on first join: '&bWelcome [PLAYER] on Server.com'
-Commands on first join:
-- Give [PLAYER] minecraft:iron_sword 1
-- msg [PLAYER] Welcome to the server
-
-# If a player fall in the void, he can be tp to spawn
+#If a player fall in the void, he can be tp to spawn
 Void to spawn: true
 
 

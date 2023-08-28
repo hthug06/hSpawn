@@ -1,0 +1,11 @@
+#This plugin require PlaceholderAPI, you can download it Here : https://www.spigotmc.org/resources/placeholderapi.6245/
+
+#If you want to disable the plugin, just set this to false
+Enable-plugin: true
+
+#Exemple with luckperm :
+#Player_Info: "%luckperms_prefix% %player_name% %luckperms_suffix%: "
+Player_Info: "%player_name%: "
+
+#You can set a permission to use the Chat in color or have the default one
+ColorChat-Permission: "hChat.colorchat"
